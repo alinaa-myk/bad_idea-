@@ -1,0 +1,42 @@
+import colorama
+from colorama import Fore, Back, Style
+import inspect
+
+colorama.init()
+
+print("Бібліотека:", colorama.__name__)
+
+print("\nАтрибути бібліотеки:")
+print(dir(colorama))
+
+print("\nАтрибути Fore:")
+print(dir(Fore))
+
+print("\nАтрибути Back:")
+print(dir(Back))
+
+print("\nАтрибути Style:")
+print(dir(Style))
+
+print("\nМетоди бібліотеки:")
+for name, method in inspect.getmembers(colorama, inspect.isfunction):
+    print(name)
+
+print("\nПриклади кольорів:")
+print(Fore.RED + "Червоний текст")
+print(Fore.GREEN + "Зелений текст")
+print(Fore.BLUE + "Синій текст")
+
+print(Style.RESET_ALL)
+
+print("\nПрограму завершено!")
+
+
+print("\nПояснення:")
+
+print("Fore - змінює колір тексту.")
+print("Back - змінює колір фону.")
+print("Style - змінює стиль тексту.")
+print("init() - запускає Colorama.")
+print("deinit() - вимикає Colorama.")
+print("dir() - показує атрибути об'єкта.")
